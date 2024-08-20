@@ -96,7 +96,7 @@ export const Experience = (props) => {
           },
           2: {
             x: -2,
-            y: -viewport.height * 2 + 0.5,
+            y: -viewport.height * 2 -1,
             z: 0,
             rotateX: 0,
             rotateY: Math.PI / 2,

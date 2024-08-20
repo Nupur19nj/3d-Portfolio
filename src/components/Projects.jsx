@@ -4,8 +4,6 @@ import { atom, useAtom } from "jotai";
 import { Image, Text } from "@react-three/drei";
 import { animate, useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
-// import { myAtom } from './store';
-
 export const projects=[
   {
       title:"AI Image Generator",
@@ -61,30 +59,30 @@ const Project = (props) => {
           onClick={() => window.open(project.url, "_blank")}
           ref={background}
         >
-          <planeGeometry args={[2.2, 2]} />
+          <planeGeometry args={[3.8, 3]} />
           <meshBasicMaterial color="black" transparent opacity={0.4} />
         </mesh>
         <Image
-          scale={[2, 1.2, 1]}
+          scale={[3.5, 1.8, 4]}
           url={project.Image}
           toneMapped={false}
-          position-y={0.3}
+          position-y={0.5}
         />
         <Text
-          maxWidth={2}
+          maxWidth={4}
           anchorX={"left"}
           anchorY={"top"}
-          fontSize={0.2}
-          position={[-1, -0.4, 0]}
+          fontSize={0.3}
+          position={[-1.8, -0.6, 0]}
         >
           {project.title.toUpperCase()}
         </Text>
         <Text
-          maxWidth={2}
+          maxWidth={3.7}
           anchorX="left"
           anchorY="top"
-          fontSize={0.1}
-          position={[-1, -0.6, 0]}
+          fontSize={0.16}
+          position={[-1.8, -1.05, 0]}
         >
           {project.description}
         </Text>
@@ -99,15 +97,15 @@ const Project = (props) => {
     const [currentProject] = useAtom(currentProjectAtom);
   
     return (
-      <group position-y={-viewport.height * 2 + 1}>
+      <group position-y={-viewport.height * 2 }>
         {projects.map((project, index) => (
           <motion.group
             key={"project_" + index}
             position={[index * 2.5, 0, -3]}
             animate={{
-              x: 0 + (index - currentProject) * 2.5,
-              y: currentProject === index ? 0 : -0.1,
-              z: currentProject === index ? -2 : -3,
+              x: 0 + (index - currentProject) * 5,
+              y: currentProject === index ? 0 : -2.5,
+              z: currentProject === index ? - 1: -5,
               rotateX: currentProject === index ? 0 : -Math.PI / 3,
               rotateZ: currentProject === index ? 0 : -0.1 * Math.PI,
             }}

@@ -303,16 +303,16 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 items-center justify-center">
+      <div className="flex w-full h-full gap-8 items-center justify-center mt-80">
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-indigo-600 transition-colors mt-40"
           onClick={previousProject}
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold">Projects</h2>
+        <h2 className="text-5xl font-bold mt-40">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-indigo-600 transition-colors mt-40"
           onClick={nextProject}
         >
           Next →
